@@ -47,6 +47,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* column-gap: px; */
     padding: 6px 20px;
     background-color: var(--white);
     color: var(--dark-purple);
@@ -56,11 +57,13 @@ body {
 
 
 /* Logo Style */
-
+.logo{
+    width: 50%;
+}
 .logo img {
     text-decoration: none;
   
-    width: 216px;
+    width: 100%;
 } 
 
 /* Menu Toggle Button (Mobile) */
@@ -75,12 +78,14 @@ body {
 
 /* Sidebar Navigation */
 .sidebar {
+    padding: 10px 20px;
+    width: 100%; /* Set width to 100% on mobile */
+    /* height: 100vh; Set height to 100vh for full viewport on mobile */
     position: fixed;
     top: 0;
     right: -250px; /* Hidden off-screen initially */
-    height: 100%;
     width: 250px;
-    background: #444;
+    background: var(--purplebg);
     color: var(--dark-purple);
     transition: right 0.3s ease;
     /* padding-top: 60px; */
@@ -96,6 +101,19 @@ body {
 .sidebar .nav-links li {
     margin: 20px 0;
 }
+.sidebar .nav-links li {
+    position: relative; /* Necessary for absolute positioning of the border */
+}
+.sidebar .nav-links li:after {
+    content: "";
+    display: block;
+    height: 1px; /* Adjust the border height as needed */
+    background-color: #ccc; /* Change the border color as desired */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
 .sidebar .nav-links li a {
     text-decoration: none;
@@ -108,6 +126,18 @@ body {
 .sidebar .nav-links li a:hover {
     background: var(--lilac);
     border-radius: 5px;
+}
+.sidebar .register-btn{
+    padding: 8px 12px;
+    background-color: var(--dark-purple);
+    color: var(--white);
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid var(--dark-purple);
+    cursor: pointer;
+}
+.sidebar .register-btn:hover{
+    background-color: var(--dark-violet);
 }
 
 /* Dropdown Menu Styling */
@@ -127,10 +157,17 @@ body {
 
 .dropdown-content li {
     padding: 5px 0;
+    border-bottom: 1px solid var(--dark-purple);
+    font-size: 12px;
 }
 
+
 .dropdown-content li a {
-    padding: 5px 20px;
+    padding: 5px 14px;
+}
+.dropdown-content li:hover{
+    color: var(--dark-violet);
+    transition: transform 0.2s ease-in-out; /* Adjust the transition duration and easing as needed */
 }
 
 .dropdown:hover .dropdown-content {
@@ -154,35 +191,40 @@ body {
 }
 
 .desktop-nav li {
-    margin-left: 20px;
+    margin-left: 10px;
+    
 }
 
 .desktop-nav li a {
     text-decoration: none;
     color: var(--dark-purple);
-    padding: 10px 15px;
+    padding: 12px 24px;
     transition: background 0.3s ease;
 }
 
 .desktop-nav li a:hover {
     background: var(--lilac);
     border-radius: 5px;
+    padding: 10px 18px;
 }
 
 /* Dropdown Menu for Desktop View */
 .desktop-nav .dropdown-content {
     display: none;
-    position: absolute;
+    /* position: absolute; */
     background: var(--lilac);
     padding: 10px;
     list-style: none;
     top: 100%; /* Position below the dropdown-toggle */
     left: 0;
     border-radius: 5px;
+    width: 100%;
+    max-height: 200px; /* Set a maximum height to prevent overflow */
+    overflow: hidden; /* Hide overflow if content exceeds max height */
 }
 
 .desktop-nav .dropdown:hover .dropdown-content {
-    display: block; /* Show dropdown on hover */
+  display: block; /* Show dropdown on hover */
 }
 
 .desktop-nav .dropdown-content li {
@@ -309,13 +351,16 @@ body {
 .product-items{
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: var(--white);
 }
 .product-items ul{
     display: flex;
     row-gap: 16px;
     flex-direction: column;
-    background-color: var(--purplebg);;
+    align-items: center;
+    background-color: var(--purplebg);
+    margin: auto;
 }
 .product-items ul li{
     list-style: none;
@@ -339,7 +384,9 @@ body {
     width: 100%;
 }
 .contact-us-banner{
+    width: 100%;
     background-color: var(--dark-purple);
+    background-position: center;
     padding: 30px 10px;
     display: flex;
     justify-content: center;
@@ -348,7 +395,7 @@ body {
 }
 .contact-us-banner h3{
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 900;
     text-align: center;
     color: var(--white);
 }
@@ -358,13 +405,16 @@ body {
     row-gap: 20px;
     padding: 10px 20px;
     margin: auto;
+    background-image: url(./images/Impresora\ láser\ vs\ tinta_\ pros\,\ contras\ y\ cuál\ necesitas\ -\ DecoElectrodomesticos_com.jpeg);
+
 }
 .location h6{
     font-size: 10px;
     font-weight: 600;
     text-align: left;
-    color: var(--dark-purple);
+    color: var(--dark-violet);
     margin-bottom: 8px;
+    
 } 
 .location-card{
     width: 100%;
@@ -463,6 +513,7 @@ body {
     color: var(--purple);
 }
 .links-container{
+    
     padding: 10px 20px;
     margin: auto;
     width: 100%;
@@ -573,6 +624,7 @@ body {
 }
 footer{
     padding: 10px 20px;
+    background-color: var(--dark-violet);
 }
 footer ul{
     display: flex;
@@ -584,7 +636,7 @@ footer ul{
 footer ul li{
     font-size: 10px;
     list-style: none;
-    color: var(--dark-purple);
+    color: var(--white);
 }
 footer a{
     text-decoration: none;
@@ -595,6 +647,7 @@ footer a{
 
 
 /* Responsive Design for Larger Screens */
+/* TABLET DESIGN*/
 @media only screen and (min-width: 768px) {
     .header{
         display: flex;
@@ -612,7 +665,7 @@ footer a{
     .header ul li{
         font-size: 12px;
         list-style: none;
-        background-color: var(--dark-purple);
+        background-color: var(--dark-violet);
         color: var(--white);
         text-align: center;
         cursor: pointer;
@@ -650,10 +703,49 @@ footer a{
     .social-media span{
         display: none;
     }
+    .navbar{
+        justify-content: flex-start;
+        column-gap: 12px;
+    }
+    .logo{
+        width: 30%;
+    }
+    .logo img{
+        width: 100%;
+        height: 80px;
+    }
+    
     /* Show Desktop Navigation */
     .desktop-nav {
         display: flex;
         margin: auto;
+        justify-content: center;
+        align-items: center;
+        column-gap: 16px;
+        padding: 8px 16px;
+    }
+    .desktop-nav li{
+        font-size: 16px;
+        margin-left: 0;
+        text-align: center;  
+        padding: 0;
+        cursor: pointer;
+    }
+    .desktop-nav li a{
+        padding: 2px;
+        cursor: pointer;
+    }
+    .desktop-nav .register-btn{
+        padding: 6px 8px;
+        background-color: var(--dark-purple);
+        color: var(--white);
+        box-sizing: border-box;
+        border-radius: 8px;
+        border: 1px solid var(--dark-purple);
+        cursor: pointer;
+    }
+    .desktop-nav .register-btn:hover{
+        background-color: var(--dark-violet);
     }
 
     /* Hide Mobile Menu Toggle and Sidebar on Larger Screens */
@@ -663,6 +755,115 @@ footer a{
 
     .sidebar {
         display: none;
+    }
+    .main-container{
+        height: 400px;
+    }
+    .products-container{
+        align-items: center;
+    }
+    .product-items{
+        align-items: center;
+    }
+    .product-items ul{
+    align-items: center;
+    }
+    .contact-us-container{
+        display: flex;
+        padding: 20px ;
+        margin: auto;
+    }
+    .links-container{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        column-gap: 30px;
+    }
+    .footerlogo{
+        width: 40%;
+    }
+    .footerlogo img{
+        width: 70%;
+    }
+    .about{
+        width: 30%;
+    }
+    .quicklinks{
+        width: 30%;
+    }
+    footer ul li{
+        font-size: 12px;
+        font-weight: 400;
+    }   
+
+}
+
+/* DESKTOP DESIGN*/
+@media only screen and (min-width: 1024px){
+    /* .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;  
+    } */
+    
+    .desktop-nav {
+        column-gap: 48px;
+        padding: 8px 16px;
+    }
+    .quote-container h6{
+        text-align: center;
+        font-size: 14px;
+    }
+    .products-container{
+        width: 100%;
+        align-items: center;
+    }
+    .products-container h6{
+        text-align: center;
+        font-size: 14px;
+    }
+    .products-items{
+        flex-direction: row;
+        width: 100%
+    }
+    .product-items ul{
+        flex-direction: row;
+        column-gap: 10%;
+        margin: auto;
+    }
+    .products-items ul li{
+        flex-direction: row;
+        margin: auto;
+
+    }
+    .product-items img{
+        width: 100%;
+    }
+    .contact-us-container{
+        flex-direction: column;
+    }
+    .location-and-forms{
+        flex-direction: row;
+        width: 100%;
+        column-gap: 10%;
+        align-items: center;
+    }
+    .location{
+        width: 40%;
+    }
+    .location h6{
+        text-align: center;
+        font-size: 14px;
+    }
+    .contact-us-form{
+        width: 50%;
+    }
+    .contact-us-form h6{
+        text-align: center;
+        font-size: 14px;
     }
 
 }
