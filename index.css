@@ -851,12 +851,19 @@ footer a{
         column-gap: 10%;
         align-items: center;
     }
+
     .location{
         width: 40%;
     }
     .location h6{
         text-align: center;
-        font-size: 14px;
+        font-size: 18px;
+        font-weight: 600;
+        border: 1px solid var(--lilac);
+        background-color: var(--lilac);
+        border-radius: 8px;
+        padding: 8px 12px;
+        width: 40%;
     }
     .location-card{
         padding-left: 20px;
@@ -867,7 +874,13 @@ footer a{
     }
     .contact-us-form h6{
         text-align: center;
-        font-size: 14px;
+        font-size: 18px;
+        font-weight: 600;
+        border: 1px solid var(--lilac);
+        background-color: var(--lilac);
+        border-radius: 8px;
+        padding: 8px 12px;
+        width: 40%;
     }
     .form-card{
         padding-left: 20px;
