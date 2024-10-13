@@ -235,86 +235,9 @@ display: block; /* Show dropdown on hover */
     border-radius: 5px;
 }
 
-
-.servicing-container{
-    display: flex;
-    padding: 20px 10px;
-    row-gap: 20px;
-    flex-direction: column;
-}
-.heading{
-    background-color: var(--dark-purple);
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 8px;
-    padding: 20px 10px;
-}
-.heading h1{
-    text-align: center;
-    font-size: 24px;
-    font-weight: 600;
-}
-.heading p{
-    text-align: center;
-    font-size: 18px;
-    font-weight: 400;
-    font-style: italic;
-    color: var(--lilac);
-    width: 80%;
-}
-.servicedetails1{
-    display: none;
-}
-
-.serviceimage{
-    width: 100%;
-}
-.serviceimage img{
-    width: 100%;
-    height: 300px;
-    margin: auto;
-}
-.divider{
-    border: 0.7px solid var(--lilac);
-    margin: 16px 10px;
-
-}
-.repair-details{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    padding: 20px 10px;
-    margin: auto;
-
-}
-.repair-details iframe{
-    width: 100%;
-    height: 300px;
-}
-.repair-details button{
-    background-color: var(--dark-purple);
-    color: var(--white);
-    width: 70%;
-    margin: auto;
-    padding: 8px 16px;
-    font-size: 16px;
-    font-weight: 600;
-    box-sizing: border-box;
-    border-radius: 8px;
-    border: 1px solid var(--dark-purple);
-    cursor: pointer;
-}
-.repair-details button:hover{
-    background-color: var(--dark-violet);
-}
-
 .links-container{
     
-    padding: 20px 20px;
+    padding: 10px 20px;
     margin: auto;
     width: 100%;
     background-color: var(--dark-purple);
@@ -557,18 +480,13 @@ footer a{
     .sidebar {
         display: none;
     }
-    .serviceimage{
-        width: 70%;
+    /* .town-list{
+        width: 30%;
+    }
+    .where-to-buy-container p{
+        width: 80%;
         margin: auto;
-    }
-    .serviceimage img{
-        width: 100%;
-        height: 400px;  
-        margin: auto; 
-    }
-    .repair-details button{
-        width: 40%;
-    }
+    } */
 
     .links-container{
         width: 100%;
@@ -607,15 +525,5 @@ footer a{
     .desktop-nav {
         column-gap: 48px;
         padding: 8px 16px;
-    }
-    .servicedetails1{
-        display: flex;
-        padding: 20px;
-        margin: auto;
-        width: 100%;
-        column-gap: 20px;
-    }
-    .servicedetails2{
-        display: none;   
     }
 }
