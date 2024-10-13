@@ -1,0 +1,598 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root{
+    --white:#ffffff;
+    --ink: #000000;
+    --dark-violet: #0e0b1c;
+    --dark-purple: #302d49;
+    --purple: #5a527c;
+    --lavender: #917dbb;
+    --lilac: #cea6e2;
+    --purplebg:rgb(240, 219, 240);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    overflow-x: hidden;
+    background-color: var(--bg);
+    min-height: 100vh;
+}
+.header{
+    display: none; 
+ 
+ }
+ 
+ /* Navbar Container */
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     /* column-gap: px; */
+     padding: 6px 20px;
+     background-color: var(--white);
+     color: var(--dark-purple);
+     position: relative;
+     margin: auto;
+ }
+ 
+ 
+ /* Logo Style */
+ .logo{
+     width: 50%;
+ }
+ .logo img {
+     text-decoration: none;
+   
+     width: 100%;
+ } 
+ 
+ /* Menu Toggle Button (Mobile) */
+ .menu-toggle {
+     display: block; /* Visible by default in mobile-first design */
+     font-size: 28px;
+     cursor: pointer;
+     background: none;
+     border: none;
+     color: var(--dark-purple);
+ }
+ 
+ /* Sidebar Navigation */
+ .sidebar {
+     padding: 10px 20px;
+     width: 100%; /* Set width to 100% on mobile */
+     /* height: 100vh; Set height to 100vh for full viewport on mobile */
+     position: fixed;
+     top: 0;
+     right: -250px; /* Hidden off-screen initially */
+     width: 250px;
+     background: var(--purplebg);
+     color: var(--dark-purple);
+     transition: right 0.3s ease;
+     /* padding-top: 60px; */
+     z-index: 100; /* Ensure it overlays other content */
+ }
+ 
+ /* Sidebar Links */
+ .sidebar .nav-links {
+     list-style: none;
+     padding: 0;
+ }
+ 
+ .sidebar .nav-links li {
+     margin: 20px 0;
+ }
+ .sidebar .nav-links li {
+     position: relative; /* Necessary for absolute positioning of the border */
+ }
+ .sidebar .nav-links li:after {
+     content: "";
+     display: block;
+     height: 1px; /* Adjust the border height as needed */
+     background-color: #ccc; /* Change the border color as desired */
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+ }
+ 
+ .sidebar .nav-links li a {
+     text-decoration: none;
+     color: var(--dark-purple);
+     padding: 10px 20px;
+     display: block;
+     transition: background 0.3s ease;
+ }
+ 
+ .sidebar .nav-links li a:hover {
+     background: var(--lilac);
+     border-radius: 5px;
+ }
+ .sidebar .register-btn{
+     padding: 8px 12px;
+     background-color: var(--dark-purple);
+     color: var(--white);
+     box-sizing: border-box;
+     border-radius: 8px;
+     border: 1px solid var(--dark-purple);
+     cursor: pointer;
+ }
+ .sidebar .register-btn:hover{
+     background-color: var(--dark-violet);
+ }
+ 
+ /* Dropdown Menu Styling */
+ .dropdown {
+     position: relative;
+ }
+ 
+ .dropdown .dropdown-toggle {
+     cursor: pointer;
+ }
+ 
+ .dropdown-content {
+     display: none; /* Hide dropdown content by default */
+     position: relative; /* Position relative to sidebar */
+     padding-left: 20px; /* Indent sub-items */
+ }
+ 
+ .dropdown-content li {
+     padding: 5px 0;
+     border-bottom: 1px solid var(--dark-purple);
+     font-size: 12px;
+ }
+ 
+ 
+ .dropdown-content li a {
+     padding: 5px 14px;
+ }
+ .dropdown-content li:hover{
+     color: var(--dark-violet);
+     transition: transform 0.2s ease-in-out; /* Adjust the transition duration and easing as needed */
+ }
+ 
+ .dropdown:hover .dropdown-content {
+     display: block; /* Show dropdown on hover */
+ }
+ 
+ /* Hide Sidebar when not visible */
+ .sidebar-closed {
+     right: -250px;
+ }
+ 
+ /* Display Sidebar when visible */
+ .sidebar-open {
+     right: 0;
+ }
+ 
+ /* Desktop Navigation Links */
+ .desktop-nav {
+     display: none; /* Hidden by default in mobile-first design */
+     list-style: none;
+ }
+ 
+ .desktop-nav li {
+     margin-left: 10px;
+     
+ }
+ 
+ .desktop-nav li a {
+     text-decoration: none;
+     color: var(--dark-purple);
+     padding: 12px 24px;
+     transition: background 0.3s ease;
+ }
+ 
+ .desktop-nav li a:hover {
+     background: var(--lilac);
+     border-radius: 5px;
+     padding: 10px 18px;
+ }
+ 
+ /* Dropdown Menu for Desktop View */
+ .desktop-nav .dropdown-content {
+     display: none;
+     /* position: absolute; */
+     background: var(--lilac);
+     padding: 10px;
+     list-style: none;
+     top: 100%; /* Position below the dropdown-toggle */
+     left: 0;
+     border-radius: 5px;
+     width: 100%;
+     max-height: 200px; /* Set a maximum height to prevent overflow */
+     overflow: hidden; /* Hide overflow if content exceeds max height */
+ }
+ 
+ .desktop-nav .dropdown:hover .dropdown-content {
+   display: block; /* Show dropdown on hover */
+ }
+ 
+ .desktop-nav .dropdown-content li {
+     margin: 5px 0;
+ }
+ 
+ .desktop-nav .dropdown-content li a {
+     padding: 5px 15px;
+     display: block;
+ }
+ 
+ .desktop-nav .dropdown-content li a:hover {
+     background: var(--lilac);
+     border-radius: 5px;
+ }
+.where-to-buy-container {
+    padding: 20px;
+    background-image: url(./images/printers.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+.where-to-buy-container h2{
+    color: var(--dark-violet);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    padding: 10px;
+}
+.where-to-buy-container p{
+    color: var(--purple);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+    padding: 10px;
+    background-color: transparent;
+}
+  
+.town-list {
+    list-style: none;
+    padding: 20px;
+    background-color: var(--lilac);
+    width: 80%;
+    margin: auto;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 2px solid var(--lilac);
+}
+        
+.town-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.town-list li span {
+    display: inline-block;
+    width: 50%; /* Adjust width as needed */
+}
+ 
+.add-subtract-icon {
+    display: inline-block;
+    width: 10%; /* Adjust width as needed */
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--dark-purple);
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.shop-list {
+    display: none; /* Initially hide shop lists */
+    list-style: none;
+    padding: 0;
+}
+
+.shop-list li {
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}    
+.links-container{
+    
+    padding: 10px 20px;
+    margin: auto;
+    width: 100%;
+    background-color: var(--dark-purple);
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    color: var(--white);
+}
+.footerlogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 8px;
+}
+.footerlogo img{
+    width: 80%;
+}
+.footerlogo p{
+    width: 100%;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
+    font-style: italic;
+    color: var(--lilac);
+}
+
+.about{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 6px;
+}
+.about h3{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+}
+.about ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+.about ul li{
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+.about span{
+    font-style: italic;
+    color: var(--lilac);
+}
+#socialmediaicons{
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+#socialmediaicons img{
+    width: 18px;
+    height: 18px;
+}
+
+.quicklinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    row-gap: 6px;
+}
+.quicklinks h3{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+}
+.quicklinks ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+.quicklinks ul li{
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    font-style: italic;
+    color: var(--lilac);
+}
+.quicklinks a{
+    text-decoration: none;
+    color: inherit;
+}
+footer{
+    padding: 10px 20px;
+    background-color: var(--dark-violet);
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+}
+footer ul li{
+    font-size: 10px;
+    list-style: none;
+    color: var(--white);
+}
+footer a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+/* Responsive Design for Larger Screens */
+/* TABLET DESIGN*/
+@media only screen and (min-width: 768px) {
+    .header{
+        display: flex;
+        padding: 10px 20px;
+        background-color: var(--dark-violet);
+        width: 100%;  
+    }
+    .header ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: auto;
+    }
+    .header ul li{
+        font-size: 12px;
+        list-style: none;
+        background-color: var(--dark-violet);
+        color: var(--white);
+        text-align: center;
+        cursor: pointer;
+    }
+    .header a{
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .header img{
+        height: 14px;
+        width: 14px;
+    }
+    .contact-icons{
+        display: flex;
+        column-gap: 10px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .contact-icons li{
+        margin-right: 10px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .social-media{
+        display: flex;
+        column-gap: 10px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .social-media li{
+        margin-right: 10px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .social-media span{
+        display: none;
+    }
+    .navbar{
+        justify-content: flex-start;
+        column-gap: 12px;
+    }
+    .logo{
+        width: 30%;
+    }
+    .logo img{
+        width: 100%;
+        height: 80px;
+    }
+    
+    /* Show Desktop Navigation */
+    .desktop-nav {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        column-gap: 16px;
+        padding: 8px 16px;
+    }
+    .desktop-nav li{
+        font-size: 16px;
+        margin-left: 0;
+        text-align: center;  
+        padding: 0;
+        cursor: pointer;
+    }
+    .desktop-nav li a{
+        padding: 2px;
+        cursor: pointer;
+    }
+    .desktop-nav .register-btn{
+        padding: 6px 8px;
+        background-color: var(--dark-purple);
+        color: var(--white);
+        box-sizing: border-box;
+        border-radius: 8px;
+        border: 1px solid var(--dark-purple);
+        cursor: pointer;
+    }
+    .desktop-nav .register-btn:hover{
+        background-color: var(--dark-violet);
+    }
+
+    /* Hide Mobile Menu Toggle and Sidebar on Larger Screens */
+    .menu-toggle {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+    .town-list{
+        width: 30%;
+    }
+    .where-to-buy-container p{
+        width: 80%;
+        margin: auto;
+    }
+
+    .links-container{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        column-gap: 30px;
+    }
+    .footerlogo{
+        width: 40%;
+    }
+    .footerlogo img{
+        width: 70%;
+    }
+    .about{
+        width: 30%;
+    }
+    .quicklinks{
+        width: 30%;
+    }
+    footer ul li{
+        font-size: 12px;
+        font-weight: 400;
+    }   
+
+}
+@media only screen and (min-width: 1024px){
+    /* .navbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;  
+    } */
+    
+    .desktop-nav {
+        column-gap: 48px;
+        padding: 8px 16px;
+    }
+}
