@@ -858,12 +858,20 @@ footer a{
         text-align: center;
         font-size: 14px;
     }
+    .location-card{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .contact-us-form{
         width: 50%;
     }
     .contact-us-form h6{
         text-align: center;
         font-size: 14px;
+    }
+    .form-card{
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
 }
