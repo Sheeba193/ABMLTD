@@ -235,6 +235,91 @@ display: block; /* Show dropdown on hover */
     border-radius: 5px;
 }
 
+
+.support-container {
+    width: 100%;;
+    margin: auto;
+    padding: 30px 20px;
+    background-color: var(--purplebg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    text-align: center;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    background-color: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--white);
+    padding: 20px;
+    margin: 30px auto;
+}
+section h2 {
+    color: var(--purple);
+    margin-bottom: 20px;
+}
+.supportimage{
+    /* background-image: url(./images/8\ Things\ to\ Check\ When\ Buying\ a\ New\ Printer.jfif);
+    background-position: cover;
+    background-repeat: no-repeat; */
+    width: 100%;
+}
+.supportimage h1{
+    width: 100%;
+    color: var(--dark-purple);
+}
+.faq {
+    margin-top: 20px;
+}
+.faq dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.faq dd {
+    margin-left: 20px;
+}
+.troubleshoot{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+.troubleshoot ul li{
+    margin-bottom: 10px;
+}
+.supportbtns{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+.supportbtns h2{
+    width: 90%;
+    margin: auto;
+}
+.supportbtns button{
+    width: 80%;
+    margin-bottom: 10px;
+    border: 1px solid var(--dark-purple);
+    border-radius: 8px;
+    background-color: var(--dark-purple);
+    color: var(--white);
+    padding: 8px 16px;
+    margin: auto;
+}
+.supportbtns a{
+    text-decoration: none;
+    cursor: pointer;
+    color:inherit;
+}
+.supportbtns span{
+    margin-left: 10px;
+}
+
 .links-container{
     
     padding: 10px 20px;
@@ -248,10 +333,10 @@ display: block; /* Show dropdown on hover */
 }
 .footerlogo{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    row-gap: 8px;
+    column-gap: 20px;
 }
 .footerlogo img{
     width: 80%;
@@ -263,6 +348,7 @@ display: block; /* Show dropdown on hover */
     text-align: left;
     font-style: italic;
     color: var(--lilac);
+    margin: auto;
 }
 
 .about{
@@ -272,11 +358,14 @@ display: block; /* Show dropdown on hover */
     justify-content: center;
     align-items: flex-start;
     row-gap: 6px;
+    margin: auto;
+    padding-top: 20px;
 }
 .about h3{
     font-size: 14px;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
+    margin: auto;
 }
 .about ul{
     width: 100%;
@@ -287,12 +376,13 @@ display: block; /* Show dropdown on hover */
 .about ul li{
     font-size: 12px;
     font-weight: 400;
-    text-align: left;
+    text-align: center;
     list-style: none;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     row-gap: 6px;
+    margin: auto;
 }
 .about span{
     font-style: italic;
@@ -303,8 +393,9 @@ display: block; /* Show dropdown on hover */
     flex-direction: row;
     column-gap: 16px;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    margin: auto;
 }
 #socialmediaicons img{
     width: 18px;
@@ -315,14 +406,16 @@ display: block; /* Show dropdown on hover */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     width: 80%;
     row-gap: 6px;
+    margin: auto;
+    padding-top: 20px;
 }
 .quicklinks h3{
     font-size: 14px;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
 }
 .quicklinks ul{
     width: 100%;
@@ -333,7 +426,7 @@ display: block; /* Show dropdown on hover */
 .quicklinks ul li{
     font-size: 12px;
     font-weight: 400;
-    text-align: left;
+    text-align: center;
     list-style: none;
     cursor: pointer;
     display: flex;
@@ -480,14 +573,28 @@ footer a{
     .sidebar {
         display: none;
     }
-    /* .town-list{
-        width: 30%;
-    }
-    .where-to-buy-container p{
+    section{
         width: 80%;
-        margin: auto;
-    } */
-
+    }
+    section p{
+        margin-bottom: 10px;
+    }
+    .troubleshoot{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    .troubleshoot li{
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        text-align: center;
+    }
+    .supportbtns{
+        width: 60%;
+    }
+    .supportbtns button{
+        width: 50%;
+    }
     .links-container{
         width: 100%;
         flex-direction: row;
@@ -525,5 +632,19 @@ footer a{
     .desktop-nav {
         column-gap: 48px;
         padding: 8px 16px;
+    }
+    
+    section {
+        width: 80%;
+    }
+    .supporttt{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+
+    }
+    .footerlogo{
+        flex-direction: column;
     }
 }
