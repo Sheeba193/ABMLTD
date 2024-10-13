@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warranty Registration</title>
+
+  <link rel="stylesheet" href="warranty-reg.css">
+  <script src="script.js"></script>
+</head>
+<body>
+      <!--header starts-->
+    <div class="header">
+        <ul class="contact-icons">
+            <li><a href="#"></a> <img src="./images/telephone.png" alt="call-icon"> <span> 0704717966</span> </li>
+            <li><a href="#"></a> <img src="./images/telephone.png" alt="call-icon"> <span> 0759712312</span> </li>
+            <li><a href="#"></a> <img src="./images/pin.png" alt="location-icon"> <span> Industrial Area, 
+                Busia rd, Godown 35, 2nd floor/ UniAfric House, 
+                Ground floor Koinange Lane, Koinange Street.</span> 
+            </li>
+        </ul>        
+        <ul class="social-media">
+            <li><a href="#"> <img src="./images/facebook (8).png" alt="facebook"> 
+                <span><img src="images/facebook (8).png" alt="facebook2"></span></a>
+            </li>
+            <li><a href="#"> <img src="./images/instagram (1).png" alt="instagram"> 
+                <span><img src="./images/instagram (1).png" alt="instagram2"></span></a></li>
+            <li><a href="#"> <img src="./images/tiktok (1).png" alt="tiktok"> 
+                <span><img src="./images/tiktok (1).png" alt="tiktok"></span></a></li>
+        </ul>   
+        
+    </div>
+    <!--header ends-->
+
+    <!--nav starts-->
+    <!-- Navbar Container -->
+    <nav class="navbar">
+        <!-- Logo Section -->
+        <div class="logo">
+            <a href="index.html"><img src="./images/ABMLTD LOGO.jpg" alt="logo"></a>
+        </div>
+
+        <!-- Menu Button for Mobile View -->
+        <button class="menu-toggle" id="menu-toggle">
+            &#9776; <!-- Unicode for a hamburger menu icon -->
+        </button>
+
+        <!-- Sidebar Navigation for Mobile View -->
+        <div class="sidebar sidebar-closed" id="sidebar">
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle"> Products&#x25BC;</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Single Function</a></li>
+                        <li><a href="#">Multi Function</a></li>
+                        <li><a href="#">Fantum Color</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Where to Buy</a></li>
+                <li><a href="#">Servicing</a></li>
+                <li><a href="#"> Support</a></li>
+                <li><a href="#"><button class="register-btn"> Register Warranty</button></a></li>
+            </ul>
+        </div>
+
+        <!-- Navbar Links for Larger Screens -->
+        <ul class="nav-links desktop-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle"> Products&#x25BC;</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Single Function</a></li>
+                    <li><a href="#">Multi Function</a></li>
+                    <li><a href="#">Fantum Color</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Where to Buy</a></li>
+            <li><a href="#">Servicing</a></li>
+            <li><a href="#"> Support</a></li>
+            <li><a href="#"><button class="register-btn"> Register Warranty</button></a></li>
+        </ul>
+    </nav>
+
+    <script src="script.js"></script>
+    <!--nav ends-->
+
+    <div class="warranty-container">
+        <div class="text">
+            Warranty Registration
+        </div>
+        <form action="#" enctype="multipart/form-data" method="POST">
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label for="first-name">First Name</label>
+                </div>
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label for="last-name">Last Name</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text">
+                    <div class="underline"></div>
+                    <label for="manufacturer-name">Manufacturer (Optional)</label>
+                </div>
+                <div class="input-data">
+                    <input type="date" required>
+                    <div class="underline"></div>
+                    <label for="date-purchased">Date Purchased</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label for="shop-outlet">Shop Outlet Purchased From</label>
+                </div>
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label for="printer-model">Model of Printer</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="file" accept="application/pdf" required>
+                    <div class="underline"></div>
+                    <label for="proof-of-purchase">Upload Proof of Purchase (PDF)</label>
+                </div>
+            </div>
+            <div class="form-row submit-btn">
+                <div class="input-data">
+                    <div class="inner"></div>
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+       <!--links starts-->
+    <div class="links-container">
+        <div class="footerlogo">
+            <img src="./images/logofooter.jpg" alt="logo">
+            <p> Print Smarter, Print Better</p>
+        </div>
+
+        <div class="about">
+            <h3> ABOUT</h3>
+            <ul>
+                <li> Location: <span>Building No. 35 Busia road, 
+                    Industrial Area P.O Box 17555- 00500 Nairobi Kenya/
+                     Uniaftric House Koinange Lane.</span>
+                </li>
+                <li> Phone: <span> 0712566387/ 076387123</span></li>
+                <li>Email: <span>info@abmltd.co.ke</span></li>
+                <li id="socialmediaicons"> 
+                    <img src="./images/instagram (1).png" alt="instagram">
+                    <img src="./images/facebook (8).png" alt="facebook">
+                    <img src="./images/tiktok (1).png" alt="tiktok">
+                </li>
+            </ul>
+        </div>
+        <div class="quicklinks">
+            <h3> QUICK LINKS</h3>
+            <ul>
+                <li><a href=""> Home</a></li>
+                <li><a href=""> Support </a></li>
+                <li><a href=""> Single Function</a></li>
+                <li><a href=""> Where to Buy</a></li>
+                <li><a href=""> Multi Function</a></li>
+                <li><a href=""> Servicing</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <!--links ends-->
+
+    <!--footer starts-->
+    <footer>
+        <ul>
+            <li>Copyright &copy; 2024 ABM</li>
+            <li> <a href="">info@abmltd.co.ke</a></li>
+        </ul>
+    </footer>
+    <!--footer ends--
+  </body>
+</html>
