@@ -523,6 +523,8 @@ footer a{
     .navbar{
         justify-content: flex-start;
         column-gap: 12px;
+        font-size: 18px;
+        font-weight: 600;
     }
     .logo{
         width: 30%;
@@ -578,6 +580,9 @@ footer a{
     }
     section p{
         margin-bottom: 10px;
+    }
+    .supporttt{
+        flex-direction: column;
     }
     .troubleshoot{
         display: flex;

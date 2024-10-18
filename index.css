@@ -22,6 +22,7 @@
     margin: 0;
     padding: 0;
     background-color: var(--bg);
+    text-decoration: none;
 }
 html{
     scroll-behavior: smooth;
@@ -706,6 +707,8 @@ footer a{
     .navbar{
         justify-content: flex-start;
         column-gap: 12px;
+        font-size: 18px;
+        font-weight: 600;
     }
     .logo{
         width: 30%;
