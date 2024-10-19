@@ -1,31 +1,3 @@
-// const menuToggle = document.getElementById('menu-toggle');
-// const sidebar = document.getElementById('sidebar');
-
-// // Toggle sidebar open/close when the menu button is clicked
-// menuToggle.addEventListener('click', () => {
-//   sidebar.classList.toggle('sidebar-open');
-//   sidebar.classList.toggle('sidebar-closed');
-// });
-
-// // Handle dropdown functionality in sidebar for mobile view
-// const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-
-// dropdownToggles.forEach(toggle => {
-//   toggle.addEventListener('click', (e) => {
-//     e.preventDefault();
-
-//     const dropdownContent = toggle.nextElementSibling;
-//     dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-//   });
-// });
-
-// // Close the sidebar when clicking outside of it
-// document.addEventListener('click', (event) => {
-//   if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
-//     sidebar.classList.remove('sidebar-open');
-//     sidebar.classList.add('sidebar-closed');
-//   }
-// });
 
 const menuToggle = document.getElementById('menu-toggle');
 const sidebar = document.getElementById('sidebar');
@@ -55,11 +27,18 @@ document.addEventListener('click', (event) => {
 
 // ... (existing JavaScript) ...
 
-const addSubtractButtons = document.querySelectorAll('.add-subtract-icon');
+// const addSubtractButtons = document.querySelectorAll('.add-subtract-icon');
 
-addSubtractButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const shopList = button.nextElementSibling;
-    shopList.style.display = shopList.style.display === 'block' ? 'none' : 'block';
-  });
-});
+// // Add event listener to each add-subtract button
+// addSubtractButtons.forEach(button => {
+//   button.addEventListener('click', () => {
+//     // Find the associated shop-list (assumed to be the next sibling)
+//     const shopList = button.nextElementSibling;
+
+//     // Toggle the display of the shop-list
+//     if (shopList && shopList.classList.contains('shop-list')) {
+//       shopList.style.display = shopList.style.display === 'block' ? 'none' : 'block';
+//     }
+//   });
+// });
+
