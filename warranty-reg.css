@@ -213,8 +213,7 @@ body {
     left: 0;
     border-radius: 5px;
     width: 100%;
-    max-height: 200px; /* Set a maximum height to prevent overflow */
-    overflow: hidden; /* Hide overflow if content exceeds max height */
+    z-index: 20;
 }
 
 .desktop-nav .dropdown:hover .dropdown-content {
@@ -245,7 +244,7 @@ display: block; /* Show dropdown on hover */
     font-size: 28px;
     font-weight: 600;
     background: -webkit-linear-gradient(right, #917dbb, #9f01ea);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
 }
 .warranty-container form{
